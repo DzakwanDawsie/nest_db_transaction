@@ -20,7 +20,7 @@ export class TransactionService {
   async createTopupTransaction(dto: TransactionCreateDto): Promise<void> {
     const transaction = plainToClass(Transaction, dto);
     
-    // Get query runner
+    // Create query runner
     const queryRunner = getConnection().createQueryRunner();
 
     // Start transaction
